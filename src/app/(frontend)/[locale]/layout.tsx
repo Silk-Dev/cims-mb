@@ -12,6 +12,7 @@ import { dirOf, isLocale, telHref } from '@/lib/i18n'
 import { getNavigation, getServices, getSettings } from '@/lib/payload'
 
 import '../globals.css'
+import { siteUrl } from '@/lib/site'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter', display: 'swap' })
 const montserrat = Montserrat({
@@ -44,7 +45,7 @@ export async function generateMetadata({
   const { locale } = await params
   if (!isLocale(locale)) return {}
   const settings = await getSettings(locale)
-  const base = process.env.SITE_URL || 'http://localhost:3000'
+  const base = siteUrl()
   return {
     metadataBase: new URL(base),
     title: {

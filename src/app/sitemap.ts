@@ -2,11 +2,12 @@ import type { MetadataRoute } from 'next'
 
 import { locales } from '@/lib/i18n'
 import { getPayloadClient } from '@/lib/payload'
+import { siteUrl } from '@/lib/site'
 
 export const dynamic = 'force-dynamic'
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const base = process.env.SITE_URL || 'http://localhost:3000'
+  const base = siteUrl()
   const payload = await getPayloadClient()
   const [services, posts, pages] = await Promise.all([
     payload.find({

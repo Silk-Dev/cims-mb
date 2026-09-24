@@ -1,7 +1,7 @@
 {
   "name": "cims-radiologie",
   "version": "1.0.0",
-  "description": "CIMS Radiologie \u2014 Centre d'Imagerie M\u00e9dicale Mongi Slim, Menzel Bourguiba. Next.js + Payload CMS 3 (FR / AR).",
+  "description": "CIMS Radiologie — Centre d'Imagerie Médicale Mongi Slim, Menzel Bourguiba. Next.js + Payload CMS 3 (FR / AR).",
   "private": true,
   "type": "module",
   "scripts": {
@@ -33,6 +33,7 @@
     "@payloadcms/db-postgres": "3.90.2",
     "@payloadcms/next": "3.90.2",
     "@payloadcms/richtext-lexical": "3.90.2",
+    "@payloadcms/storage-vercel-blob": "3.90.2",
     "@payloadcms/translations": "3.90.2",
     "@payloadcms/ui": "3.90.2",
     "clsx": "^2.1.1",

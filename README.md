@@ -51,6 +51,15 @@ SEED_ADMIN_EMAIL=vous@exemple.tn SEED_ADMIN_PASSWORD='…' pnpm seed   # contenu
 
 Sans `SEED_ADMIN_*`, le premier compte se crée depuis `/admin`.
 
+## Vercel
+
+1. Intégrations **Neon** (Postgres) et **Blob** ajoutées au projet : elles fournissent `DATABASE_URL`
+   (ou `POSTGRES_URL`) et `BLOB_READ_WRITE_TOKEN`.
+2. Ajouter la variable **`PAYLOAD_SECRET`** (longue chaîne aléatoire) et, une fois le domaine choisi, `SITE_URL`.
+3. Déployer : les migrations s’appliquent au premier démarrage.
+4. Ouvrir `/admin`, créer le premier compte, puis cliquer sur **« Importer le contenu initial »**
+   (carte affichée sur le tableau de bord tant que le site est vide).
+
 ## Production
 
 ```bash
