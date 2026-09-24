@@ -13,7 +13,7 @@ Site bilingue **français / arabe** du **Centre d’Imagerie Médicale Mongi Sli
 | URL | Contenu |
 | --- | --- |
 | `/fr`, `/ar` | Accueil : scanner (gantry) animé, chiffres clés, examens, section « rayons X » interactive, parcours patient |
-| `/services` et `/services/<slug>` | Les 9 examens : description, points forts, indications, préparation |
+| `/services` et `/services/<slug>` | Les 9 examens de la plaquette du centre (scanner multibarrette, radiologie générale numérisée, dentaire Cone-Beam 3D, échographie morphologique 3D/4D, Doppler couleur, Doppler cardiaque, mammographie numérisée, densitométrie osseuse, IRM) : description, points forts, indications, préparation |
 | `/centre` | Le centre, l’équipe médicale, le plateau technique, plan d’accès |
 | `/patients` | Documents à apporter, consignes par examen, FAQ |
 | `/actualites` | Articles (brouillons / publication) |
@@ -73,8 +73,6 @@ pnpm seed:prod    # (une fois) importe le contenu initial dans la base de produc
 ## À vérifier avant la mise en ligne
 
 - **Horaires d’ouverture** : ceux fournis sont indicatifs (non trouvés en ligne) → *Informations du centre*.
-- **Radiologie interventionnelle** : ajoutée d’après le logo (« diagnostique & interventionnelle ») ; ajuster
-  la liste des gestes réellement pratiqués.
 - Consignes de préparation, FAQ, textes et biographie : contenus génériques rédigés pour le lancement, à faire
   relire par le Dr Ayari.
 - Photos : aucune photo réelle n’est incluse ; les illustrations sont des animations vectorielles. Ajoutez des

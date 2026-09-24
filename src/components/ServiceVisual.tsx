@@ -107,29 +107,40 @@ function renderKind(kind: string) {
       return (
         <>
           <path
-            d="M8 40 C 40 20, 80 60, 112 36"
+            d="M8 44 C 40 24, 80 64, 112 40"
             stroke={HOT}
             strokeOpacity=".35"
             strokeWidth="10"
             strokeLinecap="round"
           />
-          <path d="M8 40 C 40 20, 80 60, 112 36" stroke={HOT} strokeWidth="2" className="sv-dash" />
+          <path d="M8 44 C 40 24, 80 64, 112 40" stroke={HOT} strokeWidth="2" className="sv-dash" />
           <path
-            d="M8 60 C 40 80, 80 40, 112 64"
+            d="M8 70 C 40 90, 80 50, 112 74"
             stroke={C2}
             strokeOpacity=".35"
             strokeWidth="10"
             strokeLinecap="round"
           />
-          <path d="M112 64 C 80 40, 40 80, 8 60" stroke={C} strokeWidth="2" className="sv-dash" />
+          <path d="M112 74 C 80 50, 40 90, 8 70" stroke={C} strokeWidth="2" className="sv-dash" />
           <path
-            d="M8 96 H40 L46 84 L52 106 L60 76 L66 96 H112"
-            stroke={W}
-            strokeWidth="2"
-            strokeLinejoin="round"
-            strokeDasharray="200"
+            d="M60 52 C 70 70, 76 86, 86 104"
+            stroke={HOT}
+            strokeOpacity=".3"
+            strokeWidth="7"
+            strokeLinecap="round"
+          />
+          <path
+            d="M60 52 C 70 70, 76 86, 86 104"
+            stroke={HOT}
+            strokeWidth="1.6"
             className="sv-dash"
-            style={{ strokeDasharray: '140 60' }}
+          />
+          <path
+            d="M30 18 L90 18 L78 36 L42 36 Z"
+            fill={W}
+            fillOpacity=".12"
+            stroke={W}
+            strokeOpacity=".5"
           />
         </>
       )
@@ -207,25 +218,52 @@ function renderKind(kind: string) {
               />
             )
           })}
-          <g
-            className="sv-spin-rev"
-            style={{ transformOrigin: '60px 36px', transformBox: 'view-box' }}
-          >
-            <path d="M60 36 L60 90" stroke={C} strokeWidth="1.5" strokeLinecap="round" />
+          <g className="sv-spin" style={{ transformOrigin: '60px 58px', transformBox: 'view-box' }}>
+            <path d="M60 8 L34 108 L86 108 Z" fill={C} fillOpacity=".12" />
+            <rect x="53" y="4" width="14" height="8" rx="3" fill={W} />
+            <path d="M34 110 H86" stroke={C} strokeWidth="3" strokeLinecap="round" />
           </g>
+          <text
+            x="104"
+            y="112"
+            textAnchor="end"
+            fill={C}
+            fontSize="11"
+            fontWeight="700"
+            fontFamily="monospace"
+          >
+            3D
+          </text>
         </>
       )
-    case 'interventional':
+    case 'cardiac':
       return (
         <>
-          <circle cx="56" cy="64" r="30" stroke={C2} strokeOpacity=".5" />
-          <circle cx="56" cy="64" r="16" stroke={C} strokeWidth="1.2" className="sv-dash" />
-          <path d="M56 28v14M56 86v14M20 64h14M78 64h14" stroke={C} strokeWidth="1.5" />
-          <circle cx="56" cy="64" r="4" fill={HOT} className="sv-pulse" />
-          <g className="sv-needle">
-            <path d="M66 54 L104 16" stroke={W} strokeWidth="2.2" strokeLinecap="round" />
-            <path d="M96 20 l8 -8 4 4 -8 8z" fill={W} />
+          <g className="sv-beat">
+            <path
+              d="M60 92 C 30 72, 18 56, 18 42 C 18 30, 28 22, 39 22 C 48 22, 55 27, 60 35 C 65 27, 72 22, 81 22 C 92 22, 102 30, 102 42 C 102 56, 90 72, 60 92 Z"
+              fill={HOT}
+              fillOpacity=".18"
+              stroke={HOT}
+              strokeWidth="2"
+            />
+            <path
+              d="M60 35 C 58 50, 62 62, 60 80"
+              stroke={W}
+              strokeOpacity=".5"
+              strokeWidth="1.5"
+            />
+            <path d="M44 44 C 50 52, 52 62, 50 70" stroke={C} strokeWidth="2" className="sv-dash" />
+            <path d="M76 44 C 70 52, 68 62, 70 70" stroke={C} strokeWidth="2" className="sv-dash" />
           </g>
+          <path
+            d="M6 104 H36 L42 94 L48 112 L56 84 L62 104 H114"
+            stroke={W}
+            strokeWidth="2"
+            strokeLinejoin="round"
+            className="sv-dash"
+            style={{ strokeDasharray: '140 60' }}
+          />
         </>
       )
     case 'xray':

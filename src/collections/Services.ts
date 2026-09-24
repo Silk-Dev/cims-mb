@@ -8,12 +8,12 @@ export const serviceVisuals = [
   { label: 'Scanner (CT)', value: 'ct' },
   { label: 'IRM', value: 'mri' },
   { label: 'Échographie', value: 'ultrasound' },
-  { label: 'Doppler', value: 'doppler' },
+  { label: 'Doppler couleur', value: 'doppler' },
+  { label: 'Doppler cardiaque', value: 'cardiac' },
   { label: 'Mammographie', value: 'mammo' },
-  { label: 'Ostéodensitométrie', value: 'dexa' },
+  { label: 'Densitométrie osseuse', value: 'dexa' },
   { label: 'Radiologie générale', value: 'xray' },
-  { label: 'Radiologie dentaire', value: 'dental' },
-  { label: 'Interventionnelle', value: 'interventional' },
+  { label: 'Dentaire Cone-Beam 3D', value: 'dental' },
 ] as const
 
 export type ServiceVisual = (typeof serviceVisuals)[number]['value']

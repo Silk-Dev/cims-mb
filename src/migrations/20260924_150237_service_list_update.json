@@ -7487,17 +7487,7 @@
     "public.enum_services_visual": {
       "name": "enum_services_visual",
       "schema": "public",
-      "values": [
-        "ct",
-        "mri",
-        "ultrasound",
-        "doppler",
-        "mammo",
-        "dexa",
-        "xray",
-        "dental",
-        "interventional"
-      ]
+      "values": ["ct", "mri", "ultrasound", "doppler", "cardiac", "mammo", "dexa", "xray", "dental"]
     },
     "public.enum_pages_blocks_image_text_image_position": {
       "name": "enum_pages_blocks_image_text_image_position",
@@ -7565,6 +7555,6 @@
     "tables": {},
     "columns": {}
   },
-  "id": "8184f94a-68d2-4e25-9b99-1dfbeb2811c4",
+  "id": "1c7972d5-fac2-49af-9f28-356516d54356",
   "prevId": "00000000-0000-0000-0000-000000000000"
 }

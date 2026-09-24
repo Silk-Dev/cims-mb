@@ -2,6 +2,7 @@ import type { Payload } from 'payload'
 
 import {
   centrePage,
+  obsoleteServiceSlugs,
   faqs,
   home,
   legalPage,
@@ -78,7 +79,11 @@ export async function seed(payload: Payload) {
     })
     serviceIds[s.slug] = doc.id
   }
-  log(`${services.length} services`)
+  const removed = await payload.delete({
+    collection: 'services',
+    where: { slug: { in: obsoleteServiceSlugs } },
+  })
+  log(`${services.length} services (${removed.docs.length} obsolete removed)`)
 
   // ---- FAQs -----------------------------------------------------------------
   for (const [i, f] of faqs.entries()) {
