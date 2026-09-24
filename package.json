@@ -36,6 +36,8 @@
     "@payloadcms/storage-vercel-blob": "3.90.2",
     "@payloadcms/translations": "3.90.2",
     "@payloadcms/ui": "3.90.2",
+    "@vercel/analytics": "^2.0.1",
+    "@vercel/speed-insights": "^2.0.0",
     "clsx": "^2.1.1",
     "cross-env": "^10.1.0",
     "dotenv": "^18.0.3",

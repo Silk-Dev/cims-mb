@@ -27,7 +27,7 @@ const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
 
 export default buildConfig({
-  serverURL: process.env.SITE_URL || '',
+  // No serverURL: the admin then works on cims-mb.tn, *.vercel.app previews and localhost alike.
   admin: {
     user: Users.slug,
     importMap: {

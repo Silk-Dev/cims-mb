@@ -55,9 +55,13 @@ Sans `SEED_ADMIN_*`, le premier compte se crée depuis `/admin`.
 
 1. Intégrations **Neon** (Postgres) et **Blob** ajoutées au projet : elles fournissent `DATABASE_URL`
    (ou `POSTGRES_URL`) et `BLOB_READ_WRITE_TOKEN`.
-2. Ajouter la variable **`PAYLOAD_SECRET`** (longue chaîne aléatoire) et, une fois le domaine choisi, `SITE_URL`.
+2. Ajouter la variable **`PAYLOAD_SECRET`** (longue chaîne aléatoire). Le domaine canonique est **https://cims-mb.tn**
+   (utilisé automatiquement en production ; `SITE_URL` permet de le remplacer).
 3. Déployer : les migrations s’appliquent au premier démarrage.
-4. Ouvrir `/admin`, créer le premier compte, puis cliquer sur **« Importer le contenu initial »**
+4. **Domaine** : ajouter `cims-mb.tn` (et `www.cims-mb.tn` en redirection) dans *Settings → Domains*, puis
+   créer chez le registrar les enregistrements DNS indiqués par Vercel.
+5. Activer **Analytics** et **Speed Insights** dans l’onglet du projet (les composants sont déjà intégrés).
+6. Ouvrir `/admin`, créer le premier compte, puis cliquer sur **« Importer le contenu initial »**
    (carte affichée sur le tableau de bord tant que le site est vide).
 
 ## Production

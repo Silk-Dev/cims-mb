@@ -1,3 +1,5 @@
+import { Analytics } from '@vercel/analytics/next'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 import type { Metadata, Viewport } from 'next'
 import { IBM_Plex_Sans_Arabic, Inter, Montserrat } from 'next/font/google'
 import { notFound } from 'next/navigation'
@@ -141,6 +143,8 @@ export default async function LocaleLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   )
