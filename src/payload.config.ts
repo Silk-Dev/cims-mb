@@ -20,6 +20,7 @@ import { Users } from './collections/Users'
 import { HomePage } from './globals/HomePage'
 import { Navigation } from './globals/Navigation'
 import { SiteSettings } from './globals/SiteSettings'
+import { revalidateEndpoint } from './endpoints/revalidate'
 import { seedEndpoint } from './endpoints/seed'
 import { migrations } from './migrations'
 
@@ -72,7 +73,7 @@ export default buildConfig({
     prodMigrations: migrations,
   }),
   sharp,
-  endpoints: [seedEndpoint],
+  endpoints: [seedEndpoint, revalidateEndpoint],
   plugins: [
     // Uploads go to Vercel Blob when BLOB_READ_WRITE_TOKEN is set (Vercel has no persistent disk),
     // and to the local media/ folder otherwise.

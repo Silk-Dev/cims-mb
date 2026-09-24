@@ -1,3 +1,4 @@
+import { revalidatePath } from 'next/cache'
 import type { Endpoint } from 'payload'
 
 import { seed } from '../seed'
@@ -16,6 +17,7 @@ export const seedEndpoint: Endpoint = {
       return Response.json({ error: 'Content already exists' }, { status: 409 })
     }
     await seed(req.payload)
+    revalidatePath('/', 'layout')
     return Response.json({ ok: true })
   },
 }
