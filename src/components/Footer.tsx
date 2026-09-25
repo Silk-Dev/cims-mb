@@ -149,6 +149,18 @@ export function Footer({ locale, t, settings, nav, services }: Props) {
           </p>
           <p>{t.medicalNotice}</p>
         </div>
+        <p className="mt-6 text-center text-xs text-white/40">
+          {t.createdBy}{' '}
+          <a
+            href="https://creacom.tn"
+            target="_blank"
+            rel="noopener"
+            className="font-semibold text-white/70 transition hover:text-cyan-300"
+            dir="ltr"
+          >
+            Crea&apos;com
+          </a>
+        </p>
       </div>
     </footer>
   )

@@ -32,6 +32,7 @@ const fr = {
   links: 'Liens utiles',
   rights: 'Tous droits réservés.',
   medicalNotice: 'Les informations de ce site ne remplacent pas l’avis de votre médecin.',
+  createdBy: 'Créé par',
   directions: 'Itinéraire',
   services: {
     title: 'Nos examens',
@@ -132,6 +133,7 @@ const ar: Dictionary = {
   links: 'روابط مفيدة',
   rights: 'جميع الحقوق محفوظة.',
   medicalNotice: 'معلومات هذا الموقع لا تعوّض رأي طبيبك.',
+  createdBy: 'من إنجاز',
   directions: 'الاتجاهات',
   services: {
     title: 'فحوصاتنا',
